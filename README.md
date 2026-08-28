@@ -7,7 +7,15 @@ Bombeiros Militar de Minas Gerais, implementada a partir do design do Figma
 Todo o conteúdo textual é o do design, sem alterações. Cores, medidas e ordem
 dos elementos seguem os tokens e a diagramação do arquivo original.
 
-## Como executar
+## Acesso
+
+**<https://sheepmartins.github.io/cartilha-psp-cbmmg/>**
+
+Publicado pelo GitHub Pages a partir da raiz da branch `main`: todo `push` para
+`main` republica o site em cerca de um minuto. Não há etapa de build — o que
+está versionado é exatamente o que é servido.
+
+## Como executar localmente
 
 Sem dependências de build (não requer Node/npm). O servidor é um script
 PowerShell que usa apenas o .NET presente no Windows.
