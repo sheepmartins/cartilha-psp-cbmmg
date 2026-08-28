@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3b1fa8">
+<meta name="description" content="Primeiros Socorros Psicológicos — Cartilha Técnica de Orientação Inicial entre Pares no Corpo de Bombeiros Militar de Minas Gerais.">
+<title>Primeiros Socorros Psicológicos — CBMMG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233b1fa8'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23f0eafa' stroke-width='8'/><circle cx='50' cy='50' r='6' fill='%23f0eafa'/></svg>">
+</head>
+<body>
+
+<!-- ============ SPRITE DE ÍCONES ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1.8 12S5.4 5.2 12 5.2 22.2 12 22.2 12 18.6 18.8 12 18.8 1.8 12 1.8 12z"/><circle cx="12" cy="12" r="3.4"/></symbol>
+  <symbol id="i-thumb-up" viewBox="0 0 24 24"><path d="M7 21.2V9.8l4.5-7.2a2 2 0 0 1 3 2.5L12.9 9.8h5.6a2.5 2.5 0 0 1 2.4 3.1l-1.9 6.5a2.5 2.5 0 0 1-2.4 1.8H7z"/><path d="M7 9.8H3.4v11.4H7"/></symbol>
+  <symbol id="i-thumb-down" viewBox="0 0 24 24"><path d="M17 2.8v11.4l-4.5 7.2a2 2 0 0 1-3-2.5l1.6-4.7H5.5a2.5 2.5 0 0 1-2.4-3.1L5 4.6a2.5 2.5 0 0 1 2.4-1.8H17z"/><path d="M17 14.2h3.6V2.8H17"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.8S3.2 14.9 3.2 9.2A4.9 4.9 0 0 1 12 6.2a4.9 4.9 0 0 1 8.8 3c0 5.7-8.8 11.6-8.8 11.6z"/></symbol>
+  <symbol id="i-heart-broken" viewBox="0 0 24 24"><path d="M12 20.8S3.2 14.9 3.2 9.2A4.9 4.9 0 0 1 12 6.2a4.9 4.9 0 0 1 8.8 3c0 5.7-8.8 11.6-8.8 11.6z"/><path d="m13.2 5-2.6 5.2h3.4l-2.5 5.2"/></symbol>
+  <symbol id="i-skull" viewBox="0 0 24 24"><path d="M5 16.6A8.2 8.2 0 0 1 3.9 12.4C3.9 7.6 7.5 3.8 12 3.8s8.1 3.8 8.1 8.6a8.2 8.2 0 0 1-1.1 4.2v2.2a1.6 1.6 0 0 1-1.6 1.6H6.6A1.6 1.6 0 0 1 5 18.8z"/><circle cx="9" cy="12.1" r="1.8"/><circle cx="15" cy="12.1" r="1.8"/><path d="M10.6 17.2h2.8"/></symbol>
+  <symbol id="i-siren" viewBox="0 0 24 24"><path d="M6 20.2v-7.4a6 6 0 0 1 12 0v7.4"/><path d="M3.4 20.2h17.2"/><path d="M12 3.4V1.6M4.4 6.2 3.2 5M19.6 6.2 20.8 5"/></symbol>
+  <symbol id="i-hospital" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M9 7.6v8.8M15 7.6v8.8M9 12h6"/></symbol>
+  <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M5 3v5.2a4.1 4.1 0 0 0 8.2 0V3"/><path d="M3.4 3h3.2M11.6 3h3.2"/><path d="M9.1 12.4v2.2a4.9 4.9 0 0 0 9.8 0v-1.4"/><circle cx="18.9" cy="10.6" r="2.4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.2 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.4 22 20.2H2z"/><path d="M12 9.6v4.6"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.6 5 5L19.5 6.8"/></symbol>
+  <symbol id="i-times" viewBox="0 0 24 24"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M13.5 4.5H19.5V10.5"/><path d="M19.5 4.5 11 13"/><path d="M18 14.4v4.1A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6h4.1"/></symbol>
+  <symbol id="i-comments" viewBox="0 0 24 24"><path d="M15.4 13.6A1.6 1.6 0 0 1 13.8 15H6.2l-3.4 3V5.6A1.6 1.6 0 0 1 4.4 4h9.4a1.6 1.6 0 0 1 1.6 1.6z"/><path d="M18 8h1.6A1.6 1.6 0 0 1 21.2 9.6V21l-3-2.6h-6.4"/></symbol>
+  <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M10.2 3.6a1.9 1.9 0 0 1 3.6 0V5h3a1.2 1.2 0 0 1 1.2 1.2v3h1.4a1.9 1.9 0 0 1 0 3.6H18v3a1.2 1.2 0 0 1-1.2 1.2h-3v1.4a1.9 1.9 0 0 1-3.6 0V17h-3A1.2 1.2 0 0 1 6 15.8v-3H4.6a1.9 1.9 0 0 1 0-3.6H6v-3A1.2 1.2 0 0 1 7.2 5h3z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<header class="topbar" id="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#topo">
+      <img class="brand__logo" src="assets/img/logo-cbmmg.png" alt="" width="34" height="34">
+      <span class="brand__txt"><b>Primeiros Socorros Psicológicos</b><i>CBMMG</i></span>
+    </a>
+    <button class="btn-menu" id="btnMenu" aria-expanded="false" aria-controls="drawer" aria-label="Abrir sumário">
+      <svg class="ic"><use href="#i-menu"></use></svg>
+    </button>
+  </div>
+  <div class="progress"><span id="progress"></span></div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Sumário">
+  <div class="drawer__head">
+    <span>Sumário</span>
+    <button class="btn-close" id="btnClose" aria-label="Fechar sumário"><svg class="ic"><use href="#i-times"></use></svg></button>
+  </div>
+  <ol class="toc">
+    <li><a href="#sobre"><em>01</em> Sobre este Guia</a></li>
+    <li><a href="#uso"><em>02</em> Como e Quando Utilizar</a></li>
+    <li><a href="#psp"><em>03</em> PSP</a></li>
+    <li><a href="#modelo"><em>04</em> Modelo Olhar, Escutar e Conectar</a></li>
+    <li><a href="#olhar"><em>05</em> Olhar — Como identificar?</a></li>
+    <li><a href="#fluxograma"><em>06</em> Fluxograma de Decisão</a></li>
+    <li><a href="#escutar"><em>07</em> Escutar — Como identificar?</a></li>
+    <li><a href="#evento"><em>08</em> Após um Evento Crítico</a></li>
+    <li><a href="#alerta"><em>09</em> Sinais de Alerta</a></li>
+    <li><a href="#conectar"><em>10</em> Conectar — Para onde encaminhar?</a></li>
+    <li><a href="#sigilo"><em>11</em> Privacidade, Sigilo e Responsabilidade</a></li>
+    <li><a href="#checklist"><em>12</em> Checklist Rápido de Bolso</a></li>
+    <li><a href="#apoio"><em>13</em> Apoio Emergencial</a></li>
+    <li><a href="#fim"><em>14</em> Cuidar também é Proteger</a></li>
+    <li><a href="#referencias"><em>15</em> Referências Bibliográficas</a></li>
+  </ol>
+</nav>
+<div class="scrim" id="scrim" hidden></div>
+
+<main id="conteudo">
+
+<!-- ============================================================
+     DECK — todas as dobras empilhadas no mesmo lugar.
+     A página não rola entre elas: a rolagem só troca o conteúdo.
+     ============================================================ -->
+<div class="deck" id="deck">
+
+<!-- ============ CAPA ============ -->
+<section class="dobra cover" id="topo" data-scrolly>
+  <div class="stage">
+    <div class="fsteps">
+      <div class="fstep">
+        <div class="cover__in">
+          <img class="cover__logo" src="assets/img/logo-cbmmg.png" alt="Brasão do Corpo de Bombeiros Militar de Minas Gerais" width="120" height="120">
+          <h1 class="cover__title">
+            <span class="cover__t1">Primeiros Socorros</span>
+            <span class="cover__t2">Psicológicos</span>
+          </h1>
+          <p class="cover__sub">Cartilha Técnica de Orientação Inicial entre Pares<br>no Corpo de Bombeiros Militar de Minas Gerais</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cover__puzzle" aria-hidden="true"></div>
+</section>
+
+<!-- ============ 01 SOBRE ESTE GUIA ============ -->
+<section class="dobra band--white" id="sobre" data-scrolly>
+  <div class="wrap stage">
+    <div class="fsteps">
+      <div class="fstep">
+        <div class="about">
+          <div class="about__main">
+            <h2 class="h-sec">Sobre este Guia</h2>
+            <div class="prose">
+              <p>Esta cartilha é produto do Trabalho de Conclusão de Curso intitulado “Primeiros Socorros Psicológicos como ferramenta de apoio inicial à saúde mental no Corpo de Bombeiros Militar de Minas Gerais”, desenvolvido pelo Aluno BM Antônio Henrique Carneiro Martins no âmbito do Curso Superior de Tecnologia em Segurança Pública – Gestão e Gerenciamento de Catástrofes, da Academia de Bombeiros Militar de Minas Gerais.</p>
+              <p>Seu conteúdo está fundamentado nos princípios dos Primeiros Socorros Psicológicos e no modelo “Olhar, Escutar e Conectar”, proposto pela Organização Mundial da Saúde, reconhecido internacionalmente como estratégia de apoio humano inicial em situações de sofrimento emocional.</p>
+              <p>A proposta não é transformar o militar em profissional de saúde mental, mas oferecer orientações simples, seguras e compatíveis com os limites éticos, técnicos e institucionais da atuação entre pares.</p>
+            </div>
+          </div>
+          <div class="about__credits">
+            <div class="credit"><b>Comandante Geral do CBMMG</b><span>Jordana de Oliveira Filgueiras Daldegan</span><i>Coronel BM</i></div>
+            <div class="credit"><b>Chefe do Estado-Maior CBMMG</b><span>Moisés Magalhães de Sousa</span><i>Coronel BM</i></div>
+            <div class="credit"><b>Elaboração</b><span>Antonio Henrique Carneiro Martins</span><i>Aluno BM</i></div>
+            <div class="credit"><b>Orientação</b><span>Richelmy Murta Pinto</span><i>Major BM</i></div>
+            <div class="credit"><b>Projeto Gráfico</b><span>Ana Emilia Carneiro Martins</span><i>Designer</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 COMO E QUANDO + CUIDAR (ilustração fixa, 2 variantes) ============ -->
+<section class="dobra pinduo" id="pinduo" data-scrolly>
+  <div class="wrap stage pinduo__wrap">
+    <div class="pinduo__col">
+      <div class="fsteps">
+
+        <div class="fstep" id="uso">
+          <h2 class="h-sec h-sec--two">Como e Quando<br>Utilizar este Guia</h2>
+          <div class="prose">
+            <p>Esta cartilha foi projetada para ser uma ferramenta de consulta rápida e prática no cotidiano das unidades e frações do CBMMG. Ela deve estar acessível para orientar a tropa nos momentos em que o cuidado mútuo se fizer mais necessário.</p>
+            <p>A proposta não é substituir profissionais de saúde, mas orientar uma primeira aproximação responsável, respeitosa e segura.</p>
+          </div>
+          <figure class="pull">
+            <blockquote>“Mais do que um requisito acadêmico, este trabalho busca contribuir para o fortalecimento da cultura de cuidado no CBMMG, incentivando a observação responsável de sinais de sofrimento, a escuta respeitosa e a aproximação segura dos militares aos canais formais de apoio e atenção à saúde existentes na Corporação.”</blockquote>
+            <figcaption><span>Antonio Henrique Carneiro Martins</span><i>Aluno BM</i></figcaption>
+          </figure>
+        </div>
+
+        <div class="fstep">
+          <p class="shout">
+            <b>Cuidar</b> de quem<br>
+            <b>salva</b> também é<br>
+            <b>proteger vidas</b>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="pinduo__art">
+      <div class="pinduo__artbox">
+        <img class="art art--a is-on" id="artScribble" src="assets/img/head-scribble.png" alt="Ilustração de uma pessoa com pensamentos emaranhados" data-ph="cabeça-rabisco">
+        <img class="art art--b" id="artFlowers" src="assets/img/head-flowers.png" alt="Ilustração de uma pessoa com flores e arco-íris" data-ph="cabeça-flores">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 PSP + MODELO (retângulo que se expande) ============ -->
+<section class="dobra morphzone" id="morphzone" data-scrolly>
+  <div class="stage">
+    <div class="fsteps">
+
+      <div class="fstep" id="psp">
+        <div class="wrap psp__grid">
+          <div class="psp__aside">
+            <p class="psp__sigla">PSP</p>
+            <p class="psp__nome">Primeiros Socorros<br>Psicológicos</p>
+            <img class="art psp__art" src="assets/img/shield-psp.png" alt="Escudo com olho, ouvido e peça de quebra-cabeça" data-ph="escudo PSP">
+          </div>
+          <div class="psp__main">
+            <div class="prose">
+              <p>Primeiros Socorros Psicológicos (PSP) são uma forma de apoio humano, prático e não invasivo oferecido a uma pessoa em sofrimento mental.</p>
+              <p>No contexto do CBMMG, servem para orientar uma primeira aproximação entre colegas, com respeito, escuta e encaminhamento adequado.</p>
+            </div>
+
+            <div class="isnot isnot--yes">
+              <p class="isnot__label">PSP <b>É</b></p>
+              <ul class="isnot__list">
+                <li><svg class="ic"><use href="#i-check"></use></svg>Apoio inicial</li>
+                <li><svg class="ic"><use href="#i-check"></use></svg>Escuta respeitosa</li>
+                <li><svg class="ic"><use href="#i-check"></use></svg>Presença segura</li>
+                <li><svg class="ic"><use href="#i-check"></use></svg>Orientação para buscar ajuda</li>
+                <li><svg class="ic"><use href="#i-check"></use></svg>Conexão com canais adequados</li>
+              </ul>
+            </div>
+
+            <div class="isnot isnot--no">
+              <p class="isnot__label">PSP <b>NÃO É</b></p>
+              <ul class="isnot__list">
+                <li><svg class="ic"><use href="#i-times"></use></svg>Diagnóstico</li>
+                <li><svg class="ic"><use href="#i-times"></use></svg>Psicoterapia</li>
+                <li><svg class="ic"><use href="#i-times"></use></svg>Tratamento</li>
+                <li><svg class="ic"><use href="#i-times"></use></svg>Interrogatório</li>
+                <li><svg class="ic"><use href="#i-times"></use></svg>Investigação de trauma</li>
+                <li><svg class="ic"><use href="#i-times"></use></svg>Substituição de profissional</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fstep" id="modelo">
+        <div class="wrap">
+          <div class="modelo__head">
+            <h2 class="h-sec modelo__title"><span>Modelo</span> <b>Olhar, Escutar e Conectar</b></h2>
+            <p class="modelo__lead">O modelo da Organização Mundial de Saúde estrutura os Primeiros Socorros Psicológicos em três ações centrais:</p>
+          </div>
+          <div class="modelo__grid">
+            <article class="mcard mcard--1">
+              <img class="art mcard__art" src="assets/img/model-olhar.png" alt="Bombeiro observando com binóculos" data-ph="cena OLHAR">
+              <span class="mcard__n">1</span>
+              <h3 class="mcard__t">OLHAR</h3>
+              <p><b>Observar</b> a segurança da cena, <b>identificar</b> necessidades básicas e <b>mapear</b> sinais de crise ou alerta grave.</p>
+            </article>
+            <article class="mcard mcard--2">
+              <img class="art mcard__art" src="assets/img/model-escutar.png" alt="Bombeiro escutando atentamente" data-ph="cena ESCUTAR">
+              <span class="mcard__n">2</span>
+              <h3 class="mcard__t">ESCUTAR</h3>
+              <p><b>Aproximar-se</b> com discrição, <b>ouvir</b> ativamente sem interrupções e <b>reconhecer</b> o sofrimento relatado pelo colega, <b>respeitando</b> seu tempo e seu silêncio.</p>
+            </article>
+            <article class="mcard mcard--3">
+              <img class="art mcard__art" src="assets/img/model-conectar.png" alt="Dois bombeiros se cumprimentando" data-ph="cena CONECTAR">
+              <span class="mcard__n">3</span>
+              <h3 class="mcard__t">CONECTAR</h3>
+              <p><b>Oferecer</b> ajuda prática imediata, <b>direcionar</b> o militar aos canais institucionais adequados e <b>acionar</b> recursos de apoio.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 OLHAR ============ -->
+<section class="dobra fold fold--olhar" id="olhar" data-scrolly>
+  <div class="fold__grid">
+    <aside class="fold__aside">
+      <div class="fold__sticky">
+        <div class="fold__txt">
+          <h2 class="fold__title">Olhar</h2>
+          <p class="fold__q">Como identificar?</p>
+          <p class="fold__lead">Observe se o colega apresenta mudanças persistentes.</p>
+        </div>
+        <img class="art fold__art" src="assets/img/olhar-scene.png" alt="Bombeiro sentado com o rosto entre as mãos" data-ph="cena Olhar">
+      </div>
+    </aside>
+
+    <div class="fold__main">
+      <div class="bolt bolt--1" aria-hidden="true"></div>
+      <div class="bolt bolt--2" aria-hidden="true"></div>
+
+      <div class="fsteps">
+
+        <div class="fstep fstep--cols">
+          <div class="grp">
+            <h3 class="h-grp">Mudanças de <b>Comportamento</b></h3>
+            <ul class="tlist tlist--eye">
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Isolamento repentino da equipe</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Irritabilidade acima do habitual</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Conflitos frequentes com colegas</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Falta de interesse por atividades que antes realizava normalmente</li>
+            </ul>
+          </div>
+
+          <div class="grp">
+            <h3 class="h-grp">Queda no <b>Desempenho</b></h3>
+            <ul class="tlist tlist--eye">
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Queda repentina da produtividade</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Erros incomuns em atividades rotineiras</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Dificuldade de concentração</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Esquecimentos frequentes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fstep fstep--cols">
+          <div class="grp">
+            <h3 class="h-grp">Prejuízo no <b>Bem-estar</b></h3>
+            <ul class="tlist tlist--eye">
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Alterações importantes no sono</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Mudanças significativas no apetite</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Queixas físicas recorrentes sem causa aparente</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Aparência de exaustão constante</li>
+            </ul>
+          </div>
+
+          <div class="grp">
+            <h3 class="h-grp">Comunicação <b>Pessimista</b></h3>
+            <ul class="tlist tlist--eye">
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Comentários frequentes sobre cansaço extremo</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Falas pessimistas ou sem esperança</li>
+              <li><svg class="ic"><use href="#i-eye"></use></svg>Expressões de culpa excessiva</li>
+            </ul>
+          </div>
+
+          <div class="note note--blue">
+            <b>Observe com cuidado!</b>
+            <p>Um sinal isolado nem sempre indica sofrimento psíquico. Entretanto, a presença de vários sinais simultaneamente ou por período prolongado merece atenção e aproximação cuidadosa.</p>
+          </div>
+        </div>
+
+        <div class="fstep">
+          <!-- ============ FLUXOGRAMA ============ -->
+          <div class="flow" id="fluxograma">
+            <ol class="flow__tree">
+              <li class="fx fx--d fx-d1" data-step="1">
+                <div class="fx__box"><p>Há <b>risco imediato</b> à vida ou à segurança?</p></div>
+              </li>
+
+              <li class="fx__split" data-step="2">
+                <span class="fx__lbl fx__lbl--sim">SIM</span>
+                <span class="fx__lbl fx__lbl--nao">NÃO</span>
+              </li>
+
+              <li class="fx__cols">
+                <div class="fx__col">
+                  <span class="fx__branch fx__branch--sim" data-step="2">SIM</span>
+                  <div class="fx fx--red" data-step="3">
+                    <div class="fx__box"><p>Não deixe o militar sozinho. <b>Acione</b> apoio emergencial. (SAMU 192, CB 193)</p></div>
+                  </div>
+                  <div class="fx fx--par" data-step="4">
+                    <div class="fx__box"><p><b>Acompanhe</b> até a chegada do apoio</p></div>
+                  </div>
+                </div>
+
+                <div class="fx__col">
+                  <span class="fx__branch fx__branch--nao" data-step="2">NÃO</span>
+                  <div class="fx fx--blue" data-step="3">
+                    <div class="fx__box"><p>Aproxime-se com discrição, <b>escute</b> sem julgamento e <b>oriente</b> busca de apoio.</p></div>
+                  </div>
+                  <div class="fx fx--d fx-d2" data-step="4">
+                    <div class="fx__box"><p>Os <b>sinais persistem ou prejudicam</b> o serviço?</p></div>
+                  </div>
+                  <div class="fx__split fx__split--sub" data-step="5">
+                    <span class="fx__lbl fx__lbl--sim2">SIM</span>
+                    <span class="fx__lbl fx__lbl--nao">NÃO</span>
+                  </div>
+                  <div class="fx__cols fx__cols--sub">
+                    <div class="fx__col">
+                      <span class="fx__branch fx__branch--sim2" data-step="5">SIM</span>
+                      <div class="fx fx--par" data-step="6">
+                        <div class="fx__box"><p><b>Conecte</b> aos canais institucionais de saúde.</p></div>
+                      </div>
+                    </div>
+                    <div class="fx__col">
+                      <span class="fx__branch fx__branch--nao" data-step="5">NÃO</span>
+                      <div class="fx fx--blue" data-step="6">
+                        <div class="fx__box"><p><b>Mantenha atenção</b> respeitosa; demonstre disponibilidade; observe evolução</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="fstep">
+          <div class="note note--red">
+            <b>Risco Imediato!</b>
+            <p>Se houver fala sobre morte, desejo de desaparecer, ameaça de autoagressão, desorganização intensa ou risco à segurança, <b>não conduza a situação sozinho</b>. Permaneça próximo, preserve a segurança, acione os serviços emergenciais e encaminhe imediatamente aos canais adequados.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 ESCUTAR ============ -->
+<section class="dobra fold fold--escutar" id="escutar" data-scrolly>
+  <div class="fold__grid">
+    <aside class="fold__aside">
+      <div class="fold__sticky">
+        <div class="fold__txt">
+          <h2 class="fold__title">Escutar</h2>
+          <p class="fold__q">Como identificar?</p>
+          <p class="fold__lead">Nem sempre é fácil iniciar uma conversa. Pequenas atitudes podem fazer grande diferença.</p>
+        </div>
+        <img class="art fold__art" src="assets/img/escutar-scene.png" alt="Bombeiro acolhendo um colega" data-ph="cena Escutar">
+      </div>
+    </aside>
+
+    <div class="fold__main">
+      <div class="cloud cloud--1" aria-hidden="true"></div>
+      <div class="cloud cloud--2" aria-hidden="true"></div>
+
+      <div class="fsteps">
+
+        <div class="fstep fstep--cols">
+          <div class="grp">
+            <h3 class="h-grp">Frases que podem <b>Ajudar</b></h3>
+            <ul class="tlist tlist--up">
+              <li><svg class="ic"><use href="#i-thumb-up"></use></svg><em>“Percebi que você parece diferente nos últimos dias. Está tudo bem?”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-up"></use></svg><em>“Gostaria de conversar um pouco?”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-up"></use></svg><em>“Se quiser falar, estou disposto a ouvir.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-up"></use></svg><em>“Você não precisa passar por isso sozinho.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-up"></use></svg><em>“Existe apoio disponível caso você queira.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-up"></use></svg><em>“Posso ajudá-lo a procurar o suporte adequado.”</em></li>
+            </ul>
+          </div>
+
+          <div class="grp">
+            <h3 class="h-grp">Frases que podem <b>Prejudicar</b></h3>
+            <ul class="tlist tlist--down">
+              <li><svg class="ic"><use href="#i-thumb-down"></use></svg><em>“Isso é frescura.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-down"></use></svg><em>“Todo mundo passa por isso.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-down"></use></svg><em>“Você precisa ser mais forte.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-down"></use></svg><em>“Pare de pensar nisso.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-down"></use></svg><em>“Isso vai passar.”</em></li>
+              <li><svg class="ic"><use href="#i-thumb-down"></use></svg><em>“Você está exagerando.”</em></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fstep">
+          <div class="note note--purple">
+            <b>Não force a conversa</b>
+            <p>Se o colega não quiser falar naquele momento, demonstre disponibilidade, respeito e mantenha uma postura acolhedora. Às vezes, saber que alguém se importa já é um primeiro passo importante.</p>
+          </div>
+
+          <h3 class="h-grp">O que <b>Fazer</b></h3>
+          <ul class="tlist tlist--heart">
+            <li><svg class="ic"><use href="#i-heart"></use></svg>Converse em local reservado;</li>
+            <li><svg class="ic"><use href="#i-heart"></use></svg>Fale com calma;</li>
+            <li><svg class="ic"><use href="#i-heart"></use></svg>Escute sem interromper;</li>
+            <li><svg class="ic"><use href="#i-heart"></use></svg>Respeite o silêncio;</li>
+            <li><svg class="ic"><use href="#i-heart"></use></svg>Oriente a busca de apoio;</li>
+            <li><svg class="ic"><use href="#i-heart"></use></svg>Acione apoio emergencial se houver risco.</li>
+          </ul>
+        </div>
+
+        <div class="fstep">
+          <h3 class="h-grp">O que <b>Evitar</b></h3>
+          <ul class="tlist tlist--broken">
+            <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Julgar;</li>
+            <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Dar sermão;</li>
+            <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Fazer diagnóstico;</li>
+            <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Minimizar o sofrimento;</li>
+            <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Expor o colega;</li>
+            <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Prometer sigilo absoluto em situação de risco.</li>
+          </ul>
+
+          <div class="note note--purple">
+            <b>Limite do apoio</b>
+            <p>Ajudar não significa assumir o problema do colega. O militar deve oferecer presença, escuta e orientação, mas não deve fazer diagnóstico, investigar detalhes íntimos ou prometer resolver a situação.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 EVENTO CRÍTICO / ZONA CRÍTICA ============ -->
+<section class="dobra critica" id="evento" data-scrolly>
+  <div class="critica__travel" aria-hidden="true">
+    <div class="critica__group" id="criticaArt">
+      <span class="cbolt cbolt--1"></span>
+      <span class="cbolt cbolt--2"></span>
+      <span class="cbolt cbolt--3"></span>
+      <img class="art critica__art" src="assets/img/critica-head.png" alt="" data-ph="cabeça-caveira">
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="fsteps">
+
+      <div class="fstep">
+        <div class="wrap">
+          <div class="critica__col">
+            <h2 class="h-sec h-sec--onDark"><span>Após um</span> <b>Evento Crítico</b></h2>
+            <p class="critica__lead">Evento crítico é toda situação intensa ou potencialmente traumática que pode abalar emocionalmente o militar durante ou após a ocorrência.</p>
+
+            <ul class="tlist tlist--siren tlist--onDark">
+              <li><svg class="ic"><use href="#i-siren"></use></svg>Observe a equipe e identifique sinais de desconforto;</li>
+              <li><svg class="ic"><use href="#i-siren"></use></svg>Busque apoio quando necessário e incentive os colegas a fazerem o mesmo;</li>
+              <li><svg class="ic"><use href="#i-siren"></use></svg>Não force relato emocional detalhado;</li>
+              <li><svg class="ic"><use href="#i-siren"></use></svg>Não transforme a conversa em debriefing psicológico obrigatório;</li>
+              <li><svg class="ic"><use href="#i-siren"></use></svg>Não exponha a equipe;</li>
+              <li><svg class="ic"><use href="#i-siren"></use></svg>Evite o isolamento. Estar junto faz diferença.</li>
+            </ul>
+
+            <div class="note note--amber">
+              <b>ORIENTAÇÕES PARA LÍDERES</b>
+              <ul class="note__list">
+                <li>Acolha a Equipe e demonstre presença;</li>
+                <li>Acompanhe os sinais da equipe e ofereça suporte;</li>
+                <li>Facilite o encaminhamento para apoio quando necessário.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fstep" id="alerta">
+        <div class="wrap">
+          <div class="critica__col critica__col--right">
+            <h2 class="h-sec h-sec--alerta">Sinais de Alerta</h2>
+            <p class="critica__lead">Encaminhe ou acione apoio emergencial imediatamente quando houver:</p>
+
+            <ul class="tlist tlist--skull tlist--onDark">
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Fala sobre morte, desejo de desaparecer ou desesperança intensa;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Ameaça ou suspeita de autoagressão;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Risco à segurança do militar, da equipe ou de terceiros;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Desorganização emocional intensa;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Sofrimento que impede o militar de cumprir atividades básicas com segurança;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Uso abusivo de álcool ou outras substâncias associado ao risco;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Confusão, agitação intensa ou comportamento fora do padrão habitual;</li>
+              <li><svg class="ic"><use href="#i-skull"></use></svg>Pedido direto de ajuda ou demonstração de incapacidade de lidar sozinho com a situação.</li>
+            </ul>
+
+            <div class="note note--redSolid">
+              <b>NÃO ESPERE AGRAVAR</b>
+              <p>Em situações de risco, o apoio entre pares não é suficiente.<br>Não deixe o militar sozinho, preserve a segurança e acione imediatamente apoio emergencial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 CONECTAR ============ -->
+<section class="dobra fold fold--conectar" id="conectar" data-scrolly>
+  <div class="fold__grid">
+    <aside class="fold__aside">
+      <div class="fold__sticky">
+        <div class="fold__txt">
+          <h2 class="fold__title">Conectar</h2>
+          <p class="fold__q">Para onde encaminhar?</p>
+          <p class="fold__lead">Busque os canais de apoio adequados conforme a gravidade da situação.</p>
+        </div>
+        <img class="art fold__art" src="assets/img/ambulancia.png" alt="Ambulância do Corpo de Bombeiros" data-ph="ambulância">
+      </div>
+    </aside>
+
+    <div class="fold__main">
+      <div class="spark spark--1" aria-hidden="true"></div>
+      <div class="spark spark--2" aria-hidden="true"></div>
+
+      <div class="fsteps">
+
+        <div class="fstep">
+          <ul class="canais">
+            <li class="canal">
+              <span class="canal__ic"><svg class="ic"><use href="#i-hospital"></use></svg></span>
+              <div><b>Unidade de Atenção Primária a Saúde (UAPS)</b><p>Para orientação e encaminhamento em saúde</p></div>
+            </li>
+            <li class="canal">
+              <span class="canal__ic"><svg class="ic"><use href="#i-stethoscope"></use></svg></span>
+              <div><b>Profissionais habilitados da rede de saúde</b><p>Quando houver necessidade de avaliação especializada.</p></div>
+            </li>
+            <li class="canal">
+              <span class="canal__ic"><svg class="ic"><use href="#i-star"></use></svg></span>
+              <div><b>Chefia responsável</b><p>Quando houver risco, prejuízo funcional ou necessidade de medida institucional segura.</p></div>
+            </li>
+            <li class="canal">
+              <span class="canal__ic"><svg class="ic"><use href="#i-siren"></use></svg></span>
+              <div><b>Serviço de urgência</b><p>Quando houver risco imediato à vida, à segurança ou à integridade do militar ou de terceiros.</p></div>
+            </li>
+            <li class="canal">
+              <span class="canal__ic"><svg class="ic"><use href="#i-heart"></use></svg></span>
+              <div><b>Pessoa de confiança indicada pelo militar</b><p>Quando isso for seguro e adequado à situação.</p></div>
+            </li>
+          </ul>
+
+          <div class="note note--green">
+            <b>Conectar não é Abandonar</b>
+            <p>Encaminhar não significa se afastar de forma fria ou transferir o problema.<br>Sempre que possível, ajude o colega a dar o primeiro passo: acompanhe até o setor adequado, oriente o contato ou acione apoio emergencial.</p>
+          </div>
+        </div>
+
+        <div class="fstep fstep--cols" id="sigilo">
+          <h2 class="h-sec h-sec--green h-sec--two">Privacidade, Sigilo e<br>Responsabilidade</h2>
+          <p class="fold__intro">Respeitar a privacidade é importante. Entretanto, diante de situações de risco, proteger a vida e a segurança deve ser a prioridade.</p>
+
+          <div class="grp">
+            <h3 class="h-grp">O que deve ser <b>preservado</b></h3>
+            <ul class="tlist tlist--heart">
+              <li><svg class="ic"><use href="#i-heart"></use></svg>A dignidade do colega;</li>
+              <li><svg class="ic"><use href="#i-heart"></use></svg>Informações compartilhadas em conversa privada;</li>
+              <li><svg class="ic"><use href="#i-heart"></use></svg>A exposição desnecessária da situação;</li>
+              <li><svg class="ic"><use href="#i-heart"></use></svg>O respeito à intimidade e à vida pessoal.</li>
+            </ul>
+          </div>
+
+          <div class="grp">
+            <h3 class="h-grp">O que deve ser <b>evitado</b></h3>
+            <ul class="tlist tlist--broken">
+              <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Comentários em grupos de WhatsApp;</li>
+              <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Conversas informais sobre a situação;</li>
+              <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Exposição em ambientes de trabalho;</li>
+              <li><svg class="ic"><use href="#i-heart-broken"></use></svg>Julgamentos ou especulações.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fstep">
+          <h3 class="h-grp">Quando o sigilo <b>não deve ser mantido</b></h3>
+          <p class="fold__intro">O sigilo não deve impedir a proteção da vida ou da segurança. Procure apoio responsável quando houver:</p>
+          <ul class="tlist tlist--warn">
+            <li><svg class="ic"><use href="#i-alert"></use></svg>Risco de autoagressão;</li>
+            <li><svg class="ic"><use href="#i-alert"></use></svg>Risco à segurança do militar;</li>
+            <li><svg class="ic"><use href="#i-alert"></use></svg>Risco à equipe ou a terceiros;</li>
+            <li><svg class="ic"><use href="#i-alert"></use></svg>Agravamento importante do sofrimento;</li>
+            <li><svg class="ic"><use href="#i-alert"></use></svg>Necessidade de intervenção institucional.</li>
+          </ul>
+
+          <div class="note note--dark">
+            <b>SIGILO NÃO É OMISSÃO!</b>
+            <p>Buscar apoio não significa trair a confiança do colega, mas agir com responsabilidade e cuidado.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 CHECKLIST + APOIO ============ -->
+<section class="dobra band--white bolso" id="checklist" data-scrolly>
+  <div class="wrap stage bolso__grid">
+
+    <aside class="bolso__aside">
+      <div class="oec">
+        <article class="oec__item oec__item--olhe">
+          <span class="oec__tab">Olhe</span>
+          <div class="oec__body">
+            <p><b>Perceba</b> mudanças.</p>
+            <p><b>Observe</b> sinais de atenção.</p>
+            <p><b>Identifique</b> risco imediato.</p>
+          </div>
+          <svg class="ic oec__ic"><use href="#i-eye"></use></svg>
+        </article>
+        <article class="oec__item oec__item--escute">
+          <span class="oec__tab">Escute</span>
+          <div class="oec__body">
+            <p><b>Aproxime-se</b> com respeito.</p>
+            <p><b>Converse</b> em local reservado.</p>
+            <p><b>Escute</b> sem julgar.</p>
+          </div>
+          <svg class="ic oec__ic"><use href="#i-comments"></use></svg>
+        </article>
+        <article class="oec__item oec__item--conecte">
+          <span class="oec__tab">Conecte</span>
+          <div class="oec__body">
+            <p><b>Oriente</b> busca de apoio</p>
+            <p><b>Acione</b> apoio emergencial quando houver risco.</p>
+            <p><b>Encaminhe</b> aos canais adequados.</p>
+          </div>
+          <svg class="ic oec__ic"><use href="#i-puzzle"></use></svg>
+        </article>
+      </div>
+    </aside>
+
+    <div class="bolso__main">
+      <div class="fsteps">
+
+        <div class="fstep">
+          <h2 class="h-sec"><span>Checklist</span> <b>Rápido de Bolso</b></h2>
+          <div class="checks">
+            <ul class="checks__list" id="checks">
+              <li><label><input type="checkbox" data-k="c1"><span><b>Observei</b> sinais?</span></label></li>
+              <li><label><input type="checkbox" data-k="c2"><span><b>Conversei</b> em local reservado?</span></label></li>
+              <li><label><input type="checkbox" data-k="c3"><span><b>Escutei</b> sem julgamento?</span></label></li>
+              <li><label><input type="checkbox" data-k="c4"><span><b>Evitei</b> fazer diagnósticos?</span></label></li>
+              <li><label><input type="checkbox" data-k="c5"><span><b>Identifiquei</b> sinais de alerta?</span></label></li>
+              <li><label><input type="checkbox" data-k="c6"><span><b>Orientei</b> a busca de ajuda?</span></label></li>
+              <li><label><input type="checkbox" data-k="c7"><span><b>Conectei</b> aos canais adequados?</span></label></li>
+              <li><label><input type="checkbox" data-k="c8"><span><b>Acionei</b> apoio responsável quando necessário?</span></label></li>
+            </ul>
+            <div class="checks__foot">
+              <p class="checks__status" id="checksStatus">0 de 8 concluídos</p>
+              <button class="btn-reset" id="btnReset" type="button">Limpar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="fstep" id="apoio">
+          <h2 class="h-sec"><span>Apoio</span> <b>Emergencial</b></h2>
+          <div class="fones">
+            <a class="fone" href="tel:193">
+              <span class="fone__txt"><b>193</b><i>Bombeiros</i></span>
+              <img class="fone__logo" src="assets/img/logo-cbmmg.png" alt="" width="52" height="52">
+            </a>
+            <a class="fone" href="tel:192">
+              <span class="fone__txt"><b>192</b><i>Samu</i></span>
+              <img class="fone__logo" src="assets/img/logo-samu.png" alt="" width="52" height="52">
+            </a>
+            <a class="fone" href="tel:190">
+              <span class="fone__txt"><b>190</b><i>Polícia Militar</i></span>
+              <img class="fone__logo" src="assets/img/logo-pmmg.png" alt="" width="52" height="52">
+            </a>
+          </div>
+
+        </div>
+
+        <div class="fstep">
+          <h2 class="h-sec"><span>Instituições de</span> <b>Apoio</b></h2>
+          <ul class="insts">
+            <li class="inst">
+              <div class="inst__txt">
+                <b>Centro de Valorização à Vida (CVV)</b>
+                <a class="inst__link" href="https://cvv.org.br/" target="_blank" rel="noopener">Acessa site <svg class="ic"><use href="#i-external"></use></svg></a>
+              </div>
+              <a class="inst__fone" href="tel:188">188</a>
+            </li>
+            <li class="inst">
+              <div class="inst__txt">
+                <b>Profissionais Habilitados Credenciados (IPSM)</b>
+                <a class="inst__link" href="https://www.ipsm.mg.gov.br/credenciados_pesquisa/profissionais/" target="_blank" rel="noopener">Acessa site <svg class="ic"><use href="#i-external"></use></svg></a>
+              </div>
+            </li>
+            <li class="inst">
+              <div class="inst__txt">
+                <b>Núcleo de Atenção Integral à Saúde (NAIS)</b>
+                <a class="inst__link" href="https://www.ipsm.mg.gov.br/unidades/nais/" target="_blank" rel="noopener">Acessa site <svg class="ic"><use href="#i-external"></use></svg></a>
+              </div>
+            </li>
+            <li class="inst">
+              <div class="inst__txt">
+                <b>Escuta USP</b>
+                <a class="inst__link" href="https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/escuta-susp" target="_blank" rel="noopener">Acessa site <svg class="ic"><use href="#i-external"></use></svg></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 FECHAMENTO ============ -->
+<section class="dobra fim" id="fim" data-scrolly>
+  <div class="wrap stage">
+    <div class="fsteps">
+
+      <div class="fstep">
+        <div class="fim__head">
+          <p class="fim__title"><b>Cuidar</b> também é<br><b>Proteger.</b></p>
+          <img class="art fim__art" src="assets/img/head-flowers.png" alt="" data-ph="cabeça-flores">
+        </div>
+      </div>
+
+      <div class="fstep fstep--fimbase">
+        <div class="fim__grid">
+          <div class="prose">
+            <p>Esta cartilha não substitui o atendimento especializado, mas pode ajudar o militar a dar o primeiro passo: olhar, escutar e conectar o colega aos canais adequados de apoio.</p>
+            <p>No CBMMG, cuidar da tropa é também preservar vidas, fortalecer vínculos e proteger a missão.</p>
+          </div>
+          <img class="fim__logo" src="assets/img/logo-cbmmg.png" alt="Brasão do Corpo de Bombeiros Militar de Minas Gerais" width="200" height="200">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div><!-- /deck -->
+
+<!-- ============ 10 REFERÊNCIAS ============ -->
+<section class="band band--white refs-band" id="referencias">
+  <div class="wrap">
+    <details class="acc">
+      <summary class="acc__head">
+        <span>Referências Bibliográficas</span>
+        <svg class="ic acc__ic"><use href="#i-plus"></use></svg>
+      </summary>
+      <div class="acc__body">
+        <ol class="refs">
+          <li>AMERICAN PSYCHIATRIC ASSOCIATION. <em>Manual diagnóstico e estatístico de transtornos mentais: DSM-5-TR</em>. 5. ed. rev. Porto Alegre: Artmed, 2023.</li>
+          <li>BEJA, Maria João; PORTUGAL, Alda; CÂMARA, Joana; BERENGUER, Cláudia; REBOLO, Ana; CRAWFORD, Carlota; GONÇALVES, Dinis. Primeiros Socorros Psicológicos: intervenção psicológica na catástrofe. <em>Psychologica</em>, Coimbra, v. 61, n. 1, p. 125-142, 2018.</li>
+          <li>BRASIL. Ministério da Saúde. Conselho Nacional de Saúde. <em>Resolução nº 510, de 7 de abril de 2016</em>. Brasília, DF: Conselho Nacional de Saúde, 2016.</li>
+          <li>COIMBRA, Marli Aparecida Reis; FERREIRA, Lúcia Aparecida; ARAÚJO, Ana Paula Alves. Impactos do estresse na exposição ocupacional de bombeiros: revisão integrativa. <em>Revista Enfermagem UERJ</em>, Rio de Janeiro, v. 28, e52825, 2020.</li>
+          <li>CORPO DE BOMBEIROS MILITAR DE MINAS GERAIS. <em>Resolução nº 1.128, de 17 de maio de 2023</em>. Belo Horizonte: CBMMG, 2023.</li>
+          <li>FILIPAKI, Filipe Regalio. Incidentes críticos no serviço bombeiro militar: uma revisão de literatura e perspectivas de atenção psicossocial. <em>Studies in Health Sciences</em>, Curitiba, v. 6, n. 3, p. 1-24, 2025.</li>
+          <li>GIL, Antonio Carlos. <em>Como elaborar projetos de pesquisa</em>. 7. ed. São Paulo: Atlas, 2022.</li>
+          <li>LIMA, Eduardo de Paula; ASSUNÇÃO, Ada Ávila; BARRETO, Sandhi Maria. Prevalência de depressão em bombeiros. <em>Cadernos de Saúde Pública</em>, Rio de Janeiro, v. 31, n. 4, p. 733-743, abr. 2015.</li>
+          <li>MINAS GERAIS. Polícia Militar de Minas Gerais; Polícia Civil de Minas Gerais; Corpo de Bombeiros Militar de Minas Gerais. <em>Diretriz Integrada de Ações e Operações do Sistema de Defesa Social de Minas Gerais – DIAO</em>. Belo Horizonte: Sistema Integrado de Defesa Social, 2025.</li>
+          <li>NATIONAL INSTITUTE FOR HEALTH AND CARE EXCELLENCE. <em>Self-harm: assessment, management and preventing recurrence</em>. NICE guideline NG225. London: NICE, 2022.</li>
+          <li>OLIVEIRA, Erik; COUTINHO, Maria da Penha de Lima; COUTINHO, Márcio de Lima; COSTA FILHO, Jairton; PINTO, Izabel Cavalcanti Barros Lamenha; SOBRINHO, Emanuelle Pereira. Ideação suicida em policiais e bombeiros militares estaduais. <em>Revista Ciências Humanas</em>, Taubaté, v. 17, e36, 2024.</li>
+          <li>ORGANIZAÇÃO MUNDIAL DA SAÚDE; WAR TRAUMA FOUNDATION; VISÃO GLOBAL INTERNACIONAL. <em>Primeiros cuidados psicológicos: guia para trabalhadores de campo</em>. Brasília, DF: Organização Pan-Americana da Saúde, 2015.</li>
+          <li>PINTO, Richelmy Murta. <em>Posvenção ao suicídio para militares do Corpo de Bombeiros Militar de Minas Gerais: estudo e proposta de programa institucional</em>. 2020. Monografia (Especialização em Gestão Estratégica e Políticas Públicas) – Fundação João Pinheiro, Belo Horizonte, 2020.</li>
+          <li>WORLD HEALTH ORGANIZATION. <em>Preventing suicide: a resource for media professionals, update 2023</em>. Geneva: World Health Organization, 2023.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

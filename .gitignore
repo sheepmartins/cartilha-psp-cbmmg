@@ -1,0 +1,10 @@
+# Ferramentas de verificação usadas durante o desenvolvimento.
+# Ficam na máquina local; não fazem parte da cartilha publicada.
+test-viewports.html
+compare.html
+figma-ref/
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
